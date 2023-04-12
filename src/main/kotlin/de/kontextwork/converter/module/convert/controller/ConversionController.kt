@@ -27,7 +27,7 @@ class ConversionController(
     private val fileNameUtils: FileNameUtils
 ) : Logging {
     @PostMapping(path = [""])
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = ["*"])
     @Throws(IOException::class)
     fun convert(
         @RequestParam(name = "format", defaultValue = "pdf") targetFormatExt: String,
