@@ -21,7 +21,7 @@ import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 @RestController
-@CrossOrigin(allowedHeaders = {"Content-Type"})
+@CrossOrigin(allowedHeaders = ["Content-Type"])
 @RequestMapping("/conversion")
 class ConversionController(
     private val converterService: ConverterService,
@@ -29,7 +29,6 @@ class ConversionController(
 ) : Logging {
     @PostMapping(path = [""])
     @Throws(IOException::class)
-    @CrossOrigin(allowedHeaders = {"Authorization", "Content-Type"})
     fun convert(
         @RequestParam(name = "format", defaultValue = "pdf") targetFormatExt: String,
         @RequestParam("file") inputMultipartFile: MultipartFile
