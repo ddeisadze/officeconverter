@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Import
 
 @SpringBootApplication
-// @Import(CorsConfig::class)
 class ConverterApplication {
     companion object {
         @JvmStatic
