@@ -21,7 +21,10 @@ import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 @RestController
-@CrossOrigin(allowedHeaders = ["Content-Type", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Authorization", "X-Requested-With", "requestId", "Correlation-Id"])
+@CrossOrigin(
+    allowedHeaders = ["Content-Type", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Authorization", "X-Requested-With", "requestId", "Correlation-Id"],
+    exposedHeaders = ["Content-Type", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Authorization", "X-Requested-With", "requestId", "Correlation-Id"]
+    )
 @RequestMapping("/conversion")
 class ConversionController(
     private val converterService: ConverterService,
